@@ -1,0 +1,40 @@
+package javaBasic.ch01.sec12;
+
+public class Calculator {
+    
+	public static void main(String[]args) {
+           // 5명 아르바이트 생 급여 계산하는 프로그램 작성하기
+		   // 1명일 경우 급여 계산하기
+		// 형식 변수형태 변수명; 변수값=값;
+		String name;
+		name="홍길동";
+		int basicPay=50000;
+	    String phoneNumber= "010-123-1234";//전화번호
+		String accountNumber="국민123-12-1234";//계좌번호
+		String dept="알바생";//직급
+		boolean sex= true;//성별 남자
+		double tex= 0.03;//세금 비율
+       
+		
+		//출력하기
+		System.out.println("1번 알바 정보:"+name+" "+basicPay+""+ phoneNumber);
+		System.out.println(accountNumber +" "+ dept+" "+sex+" "+tex);
+	     String name2;
+	     name2="이순신";
+	     int basicPay2=20000;
+	     String phoneNumber2= "010-234-4567";//전화번호
+	     String accountNumber2="우리321-32-4321";//계좌번호
+	     String dept2="정직원";//직급
+	     boolean sex2= true;//성별 남자
+	     double tex2= 0.02;//세금 비율
+
+
+	     //출력하기
+	     System.out.println("2번 알바 정보:"+name2+" "+basicPay2+""+ phoneNumber2);
+	     System.out.println(accountNumber2 +" "+ dept2+" "+sex2+" "+tex2);}
+	
+	}
+	
+
+
+    

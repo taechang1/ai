@@ -1,0 +1,69 @@
+package javaBasic.ch03.sec02;
+
+public class 확인문제3장 {
+
+	public static void main(String[] args) {
+		// 교재 107쪽
+		int x=10;
+		int y=20;
+		int z=(++x)+(y--);
+		System.out.println(z);
+		
+		//2
+		int score=85;
+		String result=(!(score>90))?"가":"나";
+		System.out.println(result);
+		//3
+		int pencils= 102;
+		int students=30;
+		//학생 한명이 가지는 연필수
+		int pencilsPerstudent= pencils/students;
+		System.out.println(pencilsPerstudent);
+		
+		//남은 연필수 
+		int penlos =pencils%students;
+		System.out.println(penlos);
+		
+		//4
+		int value=356;
+		//3,56
+		double r1=value/100.0;
+//		System.out.println(r1);//300
+//		
+//		int r2=(int)r1;//3
+//		System.out.println(r2);
+//		
+//		int r3= r2*100;
+//		System.out.println(r3);
+		System.out.println((int)(value/100.3)*100 );
+		
+		//5
+		
+		int legthtop=5;
+		int legthbottom=10;
+		int height=7;
+		
+		double area=(double)((legthtop+legthbottom)*height/2);
+		System.out.println(area);
+		//6
+		int x1=10;
+		int y1=5;
+		
+		System.out.println(x1>7&&y1<=5); //참 그리고 참
+		System.out.println((x1%3==2)||(y%2!=1));//거짓 또는 거짓
+		
+		
+		//변수 선언할 때 첫글자는 영문자 소문자
+		//변수를 선언할 때는 의미 있는 글자(단어로)
+		
+		//7
+		// NaN Not a Number 숫자가 아니다 문자 논리값이다.
+		
+		double X2=5.0;
+		double y2=0.0;
+		double z2=5%y2;
+		
+
+	}
+
+}

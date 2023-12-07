@@ -1,0 +1,15 @@
+package javaBasic2.ch5.sec01;
+
+public class 참조타입 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n=10;// 스택공간
+		
+		new Scanner(System.in);//new 힙 메모리에 Scanner
+		
+		System.out.println(n);
+
+	}
+
+}

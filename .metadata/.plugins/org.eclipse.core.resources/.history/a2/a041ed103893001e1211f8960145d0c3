@@ -1,0 +1,48 @@
+package javaBasic.ch03.sec02;
+
+public class if문 {
+
+	public static void main(String[] args) {
+		// 만약에 조건이 참이면 거짓이면
+		//90~100"A" 89~90 "B"
+		int score=87;
+		
+		if(score>=90) {
+			System.out.println("A");
+		}
+		if(80<=score&&score<=89) {
+		System.out.println("b");
+		}
+	int a=20,b=10,c=20;
+	
+	if(a >=10&& b <=20 || c ==20) {
+		System.out.println("합격");
+	}
+	}
+
+   // 변수 ok가 참이면 "합격입니다" 아니면 "불합격"
+
+//	boolean ok =true;
+	if(ok) {
+		System.out.println("합격");
+	}
+//} else {
+
+	Sysem.out.println("불합격");
+}}
+int number=1;
+if(number==1) {
+	Sysem.out.println("일");
+};
+if(number==2) {
+	Sysem.out.println("이");
+};
+if(number==3) {
+	Sysem.out.println("삼");
+};
+if(number==4) {
+	Sysem.out.println("사");
+};
+//복합 if문은 if~ else if 쓰는 것
+//앞으로 참이면 아래의 조건은 수행하지 않는다.
+

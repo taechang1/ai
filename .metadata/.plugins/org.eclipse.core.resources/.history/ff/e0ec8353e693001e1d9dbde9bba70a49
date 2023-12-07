@@ -1,0 +1,38 @@
+package javaBasic.ch04.sec02;
+
+import java.util.Scanner;
+
+public class 은행예금 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc= new Scanner(System.in);
+		
+		System.out.println("은행 예금 프로잭트");
+		System.out.println("메뉴를 입력하세요?");
+		
+		String menu=sc.nextLine();//키보드로 1, 2
+		int balance=0;//예금액
+		
+		while(!menu.equals("4") ) {
+			System.out.println("----------");
+			System.out.println("1.예금|2.출금|3.잔고|4.종료");
+			System.out.println("--------");
+			System.out.println("선택>");
+			menu=sc.nextLine();
+			
+			switch(menu) {
+			case"1":System.out.println("예금액>");
+			        balance=sc.nextInt();
+			        break;//switch문을 빠져 나가라
+			case"2":System.out.println("출금>");
+			case"3":System.out.println("잔고>");
+			case"4":System.out.println("종료>");
+					 
+			}
+		}
+
+	}
+
+}

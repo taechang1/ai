@@ -1,0 +1,24 @@
+package javaBasic.ch03.sec02;
+
+public class 대입연산자102 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        int count=100;
+        
+        count+=10; //count=count+10;
+        count-=20;//conut=count-20
+        //수식을 대입 연산자로고쳐보세요	
+        count=count*5;
+        count*=5;
+        count=count/10;
+        count/=10;	
+        count=count%5;
+        count%=5;
+        boolean b1= true;
+        b1=b1&false;
+        b1&=false;
+        
+	}
+
+}

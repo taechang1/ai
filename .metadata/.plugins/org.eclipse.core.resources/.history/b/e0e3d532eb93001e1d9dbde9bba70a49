@@ -1,0 +1,47 @@
+package javaBasic.ch04.sec02;
+
+import java.util.Scanner;
+
+public class 학생명 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc= new Scanner(System.in);
+		
+		System.out.println("메뉴를 입력하세요?");
+		String menu=sc.nextLine();
+		int deposit=0;
+		int withdrawl=0;
+		int balance=0;
+		
+		while(!menu.equals("4") ) {
+			System.out.println("----------");
+			System.out.println("1.학생명|2.점수|3.출력|4.종료");
+			System.out.println("--------");
+			System.out.println("선택>");
+			menu=sc.nextLine();
+			
+			switch(menu) {
+			case"1":System.out.println("홍길동>");
+			        deposit=sc.nextInt();
+			        sc.nextLine();
+			        balance=balance+deposit;
+			        break;
+			case"2":System.out.println("100>");
+			        withdrawl=sc.nextInt();
+			        sc.nextLine();
+			        balance=balance - withdrawl;
+			case"3":System.out.println("100>"+balance);
+			        break;
+			
+			case"4":System.out.println("프로그램 종료>");
+			        break;
+			default:System.out.println("메뉴를 잘못 누르셨어요 다시");
+					 
+			}
+		}
+
+	}
+
+}

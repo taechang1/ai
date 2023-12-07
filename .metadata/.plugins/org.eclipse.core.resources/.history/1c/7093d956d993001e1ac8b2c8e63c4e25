@@ -1,0 +1,15 @@
+package javaBasic.ch04.sec02;
+
+public class While¹®¿¬½À {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int n2=1;
+		do{
+			System.out.println(n2);
+			n2++;
+		}while(n2<=10);
+	}
+
+}

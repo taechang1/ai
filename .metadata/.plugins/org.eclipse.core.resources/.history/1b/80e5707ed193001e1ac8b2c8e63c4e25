@@ -1,0 +1,20 @@
+package javaBasic.ch03.sec03;
+
+import java.util.Scanner;
+
+public class 복습문제 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc=new Scanner(System.in);
+		
+				System.out.println("화씨를 섭씨로,섭씨를 화씨로 바꾸기---");
+				System.out.println("문자를 입력하세요?(C,F)");
+				
+				System.out.println("바꾸려는 온도를 입력하세요.");
+				int temperature=sc.nextInt();
+		
+	}
+
+}

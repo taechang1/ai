@@ -1,0 +1,15 @@
+package javaBasic.ch04.sec02;
+
+import java.util.Scanner;
+
+public class 학생명 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc= new Scanner(System.in);
+		System.out.println("학생");
+		System.out.println("메뉴를 입력하세요?");
+
+	}
+
+}

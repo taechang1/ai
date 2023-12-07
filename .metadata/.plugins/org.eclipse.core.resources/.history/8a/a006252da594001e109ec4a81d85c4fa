@@ -1,0 +1,5 @@
+package javaBasic2.ch5.sec03;
+
+public enum LoginResukt {
+
+}

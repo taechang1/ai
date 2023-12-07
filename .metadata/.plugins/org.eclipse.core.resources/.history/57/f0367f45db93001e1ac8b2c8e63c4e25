@@ -1,0 +1,59 @@
+package javaBasic.ch04.sec02;
+
+public class While문연습 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// 246810 출력해 보기
+		//2를 정수형 변수에 넣기
+		//정수형 변수를 2씩 더한다
+		//반복해서 출력한다
+		//10이 넘으면 좋료한다
+		
+		int n=2;
+		while(n<=10) {
+			
+			System.out.println(n);//2
+			n=n+2;
+		}
+		//do while문
+		/*do ~while문
+		 * do{
+		 //반본할 내용
+		 }while(조건식);
+		*/
+		//1234 ...10까지 나오게
+
+		int n2=1;
+		do{
+			System.out.println(n2);
+			n2++;
+		}while(n2<=10);
+		
+		//10 9 8 7 6..32 1
+		int n3=10;
+		do {
+			System.out.println("n3");
+			n3--;
+		}while(n3>=1);
+		//2468 
+		
+		//5 10 15 20 ...100출력하기
+		System.out.println("-----");
+		int n5=5;
+		do {
+			System.out.println(n5);
+			n5=n5+5;
+		}while(n5<=100);
+		//for문
+		/* for(초기값;조건식;증가값{
+		 *    반복할 내용들
+		 *    };
+		 */
+		//123..10출력하기
+		for(int i=1;i<=10;i++) {
+			System.out.println(i);
+		}
+	}
+
+}

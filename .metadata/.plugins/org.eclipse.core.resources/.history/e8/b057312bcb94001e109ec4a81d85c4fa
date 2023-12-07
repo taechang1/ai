@@ -1,0 +1,32 @@
+package javaBasic3;
+
+public class Teacher {
+	String 코드;
+	String 이름;
+	String 전공;
+	String 구분;
+	int 급여;
+	int 시수;
+	
+	
+
+	public Teacher(String string, String string2, String string3, int i, String string4, int j) {
+		// TODO Auto-generated constructor stub
+		//생성자==클래스 이름과 같고 객체화 할때 자동으로 싱행된다
+	}
+	int[] 성적처리하기() {
+		return null;
+	}
+	String[] 레포트검사하기() {
+		return null;
+
+		
+	}
+	
+    void 입력하기(){
+		
+	}
+    void 수업하기() {
+    }
+    
+}

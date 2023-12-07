@@ -1,0 +1,22 @@
+package javaBasic.ch03.sec02;
+
+import java.util.Scanner;
+
+public class 산술연산자 {
+
+	public static void main(String[] args) {
+
+           Scanner sc= new Scanner(System.in);
+           int kor =sc.nextInt();
+           System.out.println(kor);
+           
+           double rete=sc.nextDouble();
+           System.out.println(rete);
+           
+           //true입력하기
+           boolean dx=sc.nextBoolean();
+           System.out.println(dx);
+           //
+	}
+
+}

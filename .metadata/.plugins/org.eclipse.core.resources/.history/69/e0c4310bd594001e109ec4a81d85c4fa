@@ -1,0 +1,20 @@
+package javaBasic3;
+
+public class 클래스개념 {
+
+	public static void main(String[]args) {
+		Student st1= new Student("230101","홍길동","AI",100,"010-123-1234");
+		
+		Teacher ti=new Teacher("A32","정현희","컴공",10000,"전임",20);
+		//"230101"
+		System.out.println(st1.get학번());
+		//AI
+		System.out.println(st1.get점수());
+		//정현희
+		System.out.println(ti.get이름());
+		//전임
+		System.out.println(ti.get구분());
+		System.out.println(st1.get점수());
+		System.out.println(ti.get시수());
+	}
+}

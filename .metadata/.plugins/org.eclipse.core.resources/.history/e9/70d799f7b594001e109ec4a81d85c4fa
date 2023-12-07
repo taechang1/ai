@@ -1,0 +1,32 @@
+package javaBasic2.ch5.sec03;
+
+import java.util.Scanner;
+
+public class 학생점수분석 {
+
+	public static void main(String[] args) {
+		// 키보드 학생 수 입력,학생들 점수 입력 받는다.
+		Scanner sc  =new Scanner(System.in);
+		int menu=1;//선택 변수
+		int schoolCount=0;//학생수
+		while(menu!=5) {
+			System.out.println("------------------");
+			System.out.println("1.학생수|2,점수 입력|3.점수 리스트|4.분석|5.종료");
+			System.out.println("----------");
+			System.out.println("선택>");
+			menu=sc.nextInt();
+			switch(menu) {
+			case 1:System.out.println("학생수>");
+			       schoolCount= sc.nextInt();
+			       //System.out.println(schoolCount);
+			       break;
+			case 2:
+			case 3:
+			case 4:
+			case 5:System.out.println("프로그램 종료");
+			default :System.out.println("선택수는 1~5중에 입력해 주세요.");
+			}
+		}
+	}
+
+}

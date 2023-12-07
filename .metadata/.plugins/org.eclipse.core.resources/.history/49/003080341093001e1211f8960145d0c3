@@ -1,0 +1,12 @@
+package javaBasic.ch03.sec01;
+
+public class 변수복습 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       String verhicleName="산타페";
+       int car=35000000;
+       //String verhicleName="코린다";
+	}
+
+}

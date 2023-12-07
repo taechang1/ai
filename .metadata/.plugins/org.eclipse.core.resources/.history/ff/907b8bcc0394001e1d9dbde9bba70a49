@@ -1,0 +1,19 @@
+package javaBasic2.ch5.sec03;
+
+public class 배열연습 {
+
+	public static void main(String[] args) {
+		// 배열: 동일한 자료들의 집합 연속해서 저장되어 있다.
+		//배열을 쓰는 이유? 정수 100개르 기억해야한다면 변수 100개를 만들어야 하 배열로 선언한다.
+		//배열 만드는 방법 ? 1차원 2차원 3차원
+		int[]arr=new int[] {1,2,3,4,5};
+		String[]sArr=new String[] {"a","b"};
+		double[]dArr=new double[]{1.1, 2.2, 3.3};
+		boolean[]bArr=new boolean[] {true,false};
+	
+		
+		
+
+	}
+
+}
