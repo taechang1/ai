@@ -1,0 +1,10 @@
+package javaBasic3.ch06.seco07;
+
+public class Menber {
+	
+	String name;
+	String id;
+	String 패스워드;
+
+	int age;
+	}

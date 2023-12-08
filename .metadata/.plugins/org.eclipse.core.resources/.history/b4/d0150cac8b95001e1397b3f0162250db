@@ -1,0 +1,8 @@
+package javaBasic3.ch06.seco06;
+
+public class 생성자연습 {
+
+	public 생성자연습() {
+		// TODO Auto-generated constructor stub//생성자 컨트롤 스페이바 첫번째꺼
+	}
+}

@@ -1,0 +1,19 @@
+package javaBasic3.ch06.seco06;
+
+public class 확인문제6장 {
+
+	public static void main(String[] args) {
+		// 
+		생성자연습 c1 =new 생성자연습();
+
+	}
+
+}
+
+class 확인{
+	
+	public 확인() {
+		
+	}
+	
+}
