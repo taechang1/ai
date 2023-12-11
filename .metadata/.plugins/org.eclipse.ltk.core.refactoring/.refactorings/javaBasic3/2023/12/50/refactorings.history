@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;javaBasic3.ch06.seco12.Compter.java&apos; to &apos;CompterExample.java&apos;&#x0D;&#x0A;- Original project: &apos;javaBasic3&apos;&#x0D;&#x0A;- Original element: &apos;javaBasic3.ch06.seco12.Compter.java&apos;&#x0D;&#x0A;- Renamed element: &apos;javaBasic3.ch06.seco12.CompterExample.java&apos;" description="Rename compilation unit &apos;Compter.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;javaBasic3.ch06.seco12{Compter.java" name="CompterExample.java" references="false" stamp="1702265029033" version="1.0"/>
+</session>

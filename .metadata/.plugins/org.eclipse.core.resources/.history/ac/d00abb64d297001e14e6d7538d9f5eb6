@@ -1,0 +1,13 @@
+package javaBasic3.ch06.seco12;
+
+public class Computer {
+	int sum(int...is values) {
+		int sumVar=0;
+		for(int i=0;i<values.length;i++) {
+			sumVar+= values[i];
+		}
+		reurn sumVar;
+	}
+
+}
+}

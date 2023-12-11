@@ -1,0 +1,9 @@
+package javaBasic3.ch06.seco14;
+
+public class Account {
+	String 계좌번호;
+	String 계좌주;
+	int 초기입금액;
+	int 잔고;
+
+}
