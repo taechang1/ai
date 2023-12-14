@@ -11,6 +11,20 @@
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="javaBasic4.ch07.sec13.HanKookTire"/>
     <fullyQualifiedTypeName name="javaBasic4.ch07.sec13.KumhoTire"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="javaBasic4.ch07.sec13.connect"/>
+    <fullyQualifiedTypeName name="javaBasic4.ch07.sec14.Taxi"/>
+    <fullyQualifiedTypeName name="javaBasic4.ch07.sec14.Vehicle"/>
+    <fullyQualifiedTypeName name="javaBasic4.ch07.sec15.Play"/>
+    <fullyQualifiedTypeName name="javaBasic4.ch07.sec15.SmartPhone"/>
+    <fullyQualifiedTypeName name="javaBasic4.ch07.sec15.Phone"/>
+    <fullyQualifiedTypeName name="javaBasic4.ch07.sec15.Iphone"/>
+    <fullyQualifiedTypeName name="javaBasic4.ch07.sec16.MainActivity"/>
+    <fullyQualifiedTypeName name="javaBasic4.ch07.sec16.Activity"/>
+    <fullyQualifiedTypeName name="javaBasic5.ch08.sec02.Television"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.security.cert.CertPathBuilderResult"/>
+    <fullyQualifiedTypeName name="javaBasic5.ch08.sec02.RemoteControl"/>
+    <fullyQualifiedTypeName name="javaBasic5.ch08.sec03.Vehicle"/>
+    <fullyQualifiedTypeName name="javaBasic5.ch08.sec03.CarRun"/>
+    <fullyQualifiedTypeName name="javaBasic5.ch08.sec03.Taxi"/>
 </qualifiedTypeNameHistroy>

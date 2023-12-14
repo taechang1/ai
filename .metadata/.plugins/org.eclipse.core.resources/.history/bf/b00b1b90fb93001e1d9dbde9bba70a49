@@ -1,8 +1,0 @@
-package javaBasic2.ch5.sec01;
-
-public class studunt {
-	
-	String name;
-	int kor;
-
-}
