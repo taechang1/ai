@@ -27,4 +27,12 @@
     <fullyQualifiedTypeName name="javaBasic5.ch08.sec03.Vehicle"/>
     <fullyQualifiedTypeName name="javaBasic5.ch08.sec03.CarRun"/>
     <fullyQualifiedTypeName name="javaBasic5.ch08.sec03.Taxi"/>
+    <fullyQualifiedTypeName name="javaBasic5.ch08.sec01.A"/>
+    <fullyQualifiedTypeName name="javaBasic5.ch08.sec01.Aimpl"/>
+    <fullyQualifiedTypeName name="javaBasic5.ch08.sec03.Driver"/>
+    <fullyQualifiedTypeName name="javaBasic5.ch08.sec04.Remocon"/>
+    <fullyQualifiedTypeName name="javaBasic5.ch08.sec04.확인문제9장5번.Soundable"/>
+    <fullyQualifiedTypeName name="JavaBacic6.ch09.sec01.A.B"/>
+    <fullyQualifiedTypeName name="JavaBacic6.ch09.sec02.AA.BB"/>
+    <fullyQualifiedTypeName name="JavaBacic6.ch09.sec03.LocalExample"/>
 </qualifiedTypeNameHistroy>
