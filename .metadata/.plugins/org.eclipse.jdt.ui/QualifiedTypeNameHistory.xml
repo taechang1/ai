@@ -21,7 +21,6 @@
     <fullyQualifiedTypeName name="javaBasic4.ch07.sec16.MainActivity"/>
     <fullyQualifiedTypeName name="javaBasic4.ch07.sec16.Activity"/>
     <fullyQualifiedTypeName name="javaBasic5.ch08.sec02.Television"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.security.cert.CertPathBuilderResult"/>
     <fullyQualifiedTypeName name="javaBasic5.ch08.sec02.RemoteControl"/>
     <fullyQualifiedTypeName name="javaBasic5.ch08.sec03.Vehicle"/>
@@ -35,4 +34,10 @@
     <fullyQualifiedTypeName name="JavaBacic6.ch09.sec01.A.B"/>
     <fullyQualifiedTypeName name="JavaBacic6.ch09.sec02.AA.BB"/>
     <fullyQualifiedTypeName name="JavaBacic6.ch09.sec03.LocalExample"/>
+    <fullyQualifiedTypeName name="JavaBacic6.ch09.sec04.Outter.inner"/>
+    <fullyQualifiedTypeName name="JavaBacic6.ch09.sec07.RemoteControl"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
 </qualifiedTypeNameHistroy>
