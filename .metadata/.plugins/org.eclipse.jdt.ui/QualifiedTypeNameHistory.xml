@@ -4,11 +4,9 @@
     <fullyQualifiedTypeName name="javaBasic2.ch5.sec03.week"/>
     <fullyQualifiedTypeName name="javaBasic4.ch07.sec02.Teacher"/>
     <fullyQualifiedTypeName name="javaBasic4.ch07.sec04.SupersonicAirpalne"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="javaBasic4.ch07.sec07.Person"/>
     <fullyQualifiedTypeName name="javaBasic4.ch07.sec07.A"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="javaBasic4.ch07.sec13.HanKookTire"/>
     <fullyQualifiedTypeName name="javaBasic4.ch07.sec13.KumhoTire"/>
     <fullyQualifiedTypeName name="javaBasic4.ch07.sec13.connect"/>
@@ -36,8 +34,19 @@
     <fullyQualifiedTypeName name="JavaBacic6.ch09.sec03.LocalExample"/>
     <fullyQualifiedTypeName name="JavaBacic6.ch09.sec04.Outter.inner"/>
     <fullyQualifiedTypeName name="JavaBacic6.ch09.sec07.RemoteControl"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
     <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.lang.module.ModuleDescriptor"/>
+    <fullyQualifiedTypeName name="java.lang.module.ModuleDescriptor.Modifier"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="javaApp1.ch12.sec01.Student"/>
+    <fullyQualifiedTypeName name="javaApp1.ch12.sec01.Netplex"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
 </qualifiedTypeNameHistroy>
