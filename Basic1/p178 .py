@@ -1,6 +1,6 @@
 #178 4-6
 #10 = 1 X 2 X 3 X.. 10
-
+"""
 for i in range(10):# 0~9까지
   print(i,end=" ")
 print("-"*10)
@@ -82,7 +82,7 @@ for i in range(2,31):
     break
 if x:
   print(f"{31}은 소수이다")
-  
+  """
   #소수만 출력하기
 start=int(input("시작수를 입력해주세요:"))
 end=int(input("끝 수를 입력해주세요:"))
