@@ -30,7 +30,7 @@ print(list1)
 names=["황애린","홍지수", "안지영"]
 print(names)
 
-x="/".join(names)
+x="/".join(names) #리스트를 문자열 변환
 print(x)
 phoneNumber=["010","1234","4567"]
 xx="-".join
