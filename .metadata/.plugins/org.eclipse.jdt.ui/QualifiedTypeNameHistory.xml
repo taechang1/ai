@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javaBasic4.ch07.sec15.Play"/>
-    <fullyQualifiedTypeName name="javaBasic4.ch07.sec15.SmartPhone"/>
-    <fullyQualifiedTypeName name="javaBasic4.ch07.sec15.Phone"/>
-    <fullyQualifiedTypeName name="javaBasic4.ch07.sec15.Iphone"/>
-    <fullyQualifiedTypeName name="javaBasic4.ch07.sec16.MainActivity"/>
-    <fullyQualifiedTypeName name="javaBasic4.ch07.sec16.Activity"/>
-    <fullyQualifiedTypeName name="javaBasic5.ch08.sec02.Television"/>
-    <fullyQualifiedTypeName name="java.security.cert.CertPathBuilderResult"/>
-    <fullyQualifiedTypeName name="javaBasic5.ch08.sec02.RemoteControl"/>
-    <fullyQualifiedTypeName name="javaBasic5.ch08.sec03.Vehicle"/>
-    <fullyQualifiedTypeName name="javaBasic5.ch08.sec03.CarRun"/>
     <fullyQualifiedTypeName name="javaBasic5.ch08.sec03.Taxi"/>
     <fullyQualifiedTypeName name="javaBasic5.ch08.sec01.A"/>
     <fullyQualifiedTypeName name="javaBasic5.ch08.sec01.Aimpl"/>
@@ -53,11 +42,22 @@
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="java.util.NavigableSet"/>
     <fullyQualifiedTypeName name="java.util.SortedSet"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="javaApp1.ch12.sec07.Person"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="javaApp1.ch12.sec07.Board"/>
-    <fullyQualifiedTypeName name="java.util.TreeSet"/>
     <fullyQualifiedTypeName name="javaApp1.ch12.sec07.ComparableEx02"/>
+    <fullyQualifiedTypeName name="javaApp2.ch15.sec02.Fruit"/>
+    <fullyQualifiedTypeName name="java.lang.Comparable"/>
+    <fullyQualifiedTypeName name="java.util.Comparator"/>
+    <fullyQualifiedTypeName name="java.util.TreeSet"/>
+    <fullyQualifiedTypeName name="javaApp2.ch15.sec02.FruitCom"/>
+    <fullyQualifiedTypeName name="java.util.Stack"/>
+    <fullyQualifiedTypeName name="JavaApp3.ch13.sec01.Box"/>
+    <fullyQualifiedTypeName name="JavaApp3.ch13.sec01.InterImpl"/>
+    <fullyQualifiedTypeName name="JavaApp3.ch13.sec01.Student"/>
+    <fullyQualifiedTypeName name="Inter01Impl"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ConcurrentSkipListSet"/>
+    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
 </qualifiedTypeNameHistroy>
