@@ -1,23 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="javaBasic5.ch08.sec03.Taxi"/>
-    <fullyQualifiedTypeName name="javaBasic5.ch08.sec01.A"/>
-    <fullyQualifiedTypeName name="javaBasic5.ch08.sec01.Aimpl"/>
-    <fullyQualifiedTypeName name="javaBasic5.ch08.sec03.Driver"/>
-    <fullyQualifiedTypeName name="javaBasic5.ch08.sec04.Remocon"/>
-    <fullyQualifiedTypeName name="javaBasic5.ch08.sec04.확인문제9장5번.Soundable"/>
-    <fullyQualifiedTypeName name="JavaBacic6.ch09.sec01.A.B"/>
-    <fullyQualifiedTypeName name="JavaBacic6.ch09.sec02.AA.BB"/>
-    <fullyQualifiedTypeName name="JavaBacic6.ch09.sec03.LocalExample"/>
-    <fullyQualifiedTypeName name="JavaBacic6.ch09.sec04.Outter.inner"/>
-    <fullyQualifiedTypeName name="JavaBacic6.ch09.sec07.RemoteControl"/>
-    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
-    <fullyQualifiedTypeName name="java.lang.NullPointerException"/>
-    <fullyQualifiedTypeName name="java.lang.ArithmeticException"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
-    <fullyQualifiedTypeName name="java.lang.Math"/>
-    <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="java.lang.module.ModuleDescriptor"/>
     <fullyQualifiedTypeName name="java.lang.module.ModuleDescriptor.Modifier"/>
     <fullyQualifiedTypeName name="javaApp1.ch12.sec01.Student"/>
     <fullyQualifiedTypeName name="javaApp1.ch12.sec01.Netplex"/>
@@ -56,8 +38,26 @@
     <fullyQualifiedTypeName name="JavaApp3.ch13.sec01.InterImpl"/>
     <fullyQualifiedTypeName name="JavaApp3.ch13.sec01.Student"/>
     <fullyQualifiedTypeName name="Inter01Impl"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.util.concurrent.ConcurrentSkipListSet"/>
     <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+    <fullyQualifiedTypeName name="JavaApp3.ch16.sec03.Person"/>
+    <fullyQualifiedTypeName name="JavaApp3.ch16.sec03.Computer"/>
+    <fullyQualifiedTypeName name="JavaApp3.ch16.sec03.Calcuable"/>
+    <fullyQualifiedTypeName name="java.io.FileNotFoundException"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.io.FileReader"/>
+    <fullyQualifiedTypeName name="java.io.FileWriter"/>
+    <fullyQualifiedTypeName name="java.io.DataInputStream"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.OutputStream"/>
+    <fullyQualifiedTypeName name="javaApp5.ch18.sec02.ObjectStreamEx"/>
+    <fullyQualifiedTypeName name="java.io.BufferedOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.Serializable"/>
+    <fullyQualifiedTypeName name="java.io.InputStream"/>
+    <fullyQualifiedTypeName name="java.io.BufferedInputStream"/>
+    <fullyQualifiedTypeName name="java.io.ObjectOutputStream"/>
+    <fullyQualifiedTypeName name="java.io.ObjectInputStream"/>
+    <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 </qualifiedTypeNameHistroy>
