@@ -1,12 +1,12 @@
 #288 
 #7-3
-def func():
-  global x
-  x=200
-  print(x)
-x=100
-func()
-print(x)
+# def func():
+#   global x
+#   x=200
+#   print(x)
+# x=100
+# func()
+# print(x)
 
 #7-4
 #실행 결과를 보면서 차례대로 만들어 갑니다
@@ -81,7 +81,7 @@ def b(s1):
 s= input("문자열을 입력하세요")
 b(s)
 print(s)
-'''
+
 #심화 7-2
 eng_dict={"house":"집","piano":"피아노","christmas":"크리스마스","friend":"친구","bread":"빵"}
 def engQuiz(eng_dict):
@@ -93,18 +93,28 @@ def engQuiz(eng_dict):
           print("틀렸어요!")
           
 engQuiz(eng_dict)
+'''
 #심화 7-1
-n=int(input("n값을 입력해주세요"))
+# n=int(input("n값을 입력해주세요"))
 
-def decimalFun(n1):
-  de=[]
-  for i in range(2,n1,1):
-    if i%i==0 and i%i==0:
-       de.append(i)
-       break
-  print(de)
-            
+# def decimalFun(n1):
+#   de=[]
+#   for i in range(2,n1,1):
+#     if i%i==0 and i%i==0:
+#        de.append(i)
+#        break
+#   print(de)
+          
+# decimalFun(n)
+#7-3
+n=int(input("n값을 입력하세요:"))
 
-decimalFun(n)
+def nMul(n):
+   result=[]
+   for i in range(1,n+1):
+      result.append(i*i)
+   return result
+resultList=nMul(n)
+print(resultList)
 
 
