@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #aaef78;
+}
+.wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+#header {
+  width: 1200px;
+  height: 100px;
+  background-color: #5fcc41;
+}
+#nav {
+  width: 1200px;
+  height: 100px;
+  background-color: #2fd5e4;
+}
+#aside {
+  width: 400px;
+  height: 800px;
+  background-color: #0ca960;
+  float: left;
+}
+#Section {
+  width: 800px;
+  height: 800px;
+  background-color: #12767d;
+  float: left;
+}
+#footer {
+  width: 1200px;
+  height: 80px;
+  background-color: #9d7de6;
+  /*#바로 위에 section float: left때문에 안됀다*/
+  clear: both;
+}
+@media (max-width: 1300px) {
+  #wrap {
+    width: 96;
+  }
+}
+@media (max-width: 768px) {
+  #wrap {
+    width: 100;
+  }
+}
+@media (max-width: 480px) {
+  #aside {
+    width: 100;
+    height: 300px;
+    background-color: #dea53c;
+  }
+}
+@media (max-width: 768px) {
+  #section {
+    width: 100;
+    background-color: #8c2727;
+  }
+}
