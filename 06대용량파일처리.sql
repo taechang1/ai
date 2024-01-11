@@ -253,23 +253,50 @@ select sysdate();
 
 select*from usertbl;
 -- -------------------- 261 대용량 파일 처리하기- 파일 올리고 (업로드) 내리기(다운로드)
+-- 1단계 데이터 베이스를 만든다
 create database moviedb;
+-- 2단계 데이터 베이스를 사용한다 (활성화 열기)
 use moviedb;
+-- 3단계 테이블 만들기
 create table movietbl
-(movie_id int,
+(
+movie_id int,
 movie_title varchar(30),
 movie_director varchar(20),
 movie_star varchar(20),
-movie_script longtext,-- 대본
-movie_film longblob) default charset=utf8mb4;
+movie_script longtext,
+movie_film longblob
+);
+-- 4단계 자료를 삽입한다
 insert into movietbl
-values(1,'쉰들러리스트','스필버그','리암니슨',
+values
+(1,'쉰들러리스트','스필버그','리암니슨',
 load_file( 'D:/ai/study/temp/movies/Schindler.txt'),
 load_file( 'D:/ai/study/temp/movies/Schindler.mp4')
 );
+-- 5단계 select문으로 검색을 한다
 select*from movietbl;
 
+-- long text long blob가 null이 나오는 이유
+-- 1이유 용량이 모자라서
 
 show variables like'max_allowed_packet';-- 패킷의 크기를 보기
+-- 2이유 경로 틀려서
 show variables like'secure_file_priv';-- mySQL이 지정한 업로드 경로보기
-drop table movietbl;
+
+-- 환경을 설정하기
+-- 내려받기 데이터 베이스 --> 개인 컴퓨터로 다운
+-- 1단계 내릴 것을 확인하기
+select movie_script from movietbl where movie_id =1;
+-- 2단계 내리기
+select movie_script from movietbl where movie_id =1
+into outfile'D:/ai/study/temp/movies/ movie_script_copy.txt'
+lines terminated by'\\n';
+
+-- 동영상 파일 내리기
+-- 1단계 내릴 것을 확인하기
+select movie_film from movietbl where movie_id=1;
+-- 2단계 내리기
+select movie_film from movietbl where movie_id=1
+into outfile'D:/ai/study/temp/movies/ movie_file_copy.mp4';
+
