@@ -24,7 +24,7 @@ weight.heavy
 mean(weight)
 mean(weight.heavy)
 #중위수 중앙값
-median(weight))
+median(weight)
 median(weight.heavy)
 #질서 평균 
 mean(weight,trim=2.0)
