@@ -28,3 +28,387 @@ subset( mydata, fit$cluster==2 )
 fit$size
 subset( mydata, fit$cluster==3 )
 
+dim(iris)
+str(iris)
+mydata<-iris[,1:4]
+fit<-kmeans(x=mydata,center=4)
+#군집의 갯수는 어떻개 쓸가 1 )루트 (관찰값) 갯수볻 작게 2)str(데이터셋) factor가 있다면 
+#levels 수를 한다
+fit
+fit$cluster#군집 내용
+fit$centers#군집 중심점의 평균
+fit$size# 군집의 갯수
+#군집 시각화
+library(cluster)
+clusplot(mydata,fit$cluster,color = T,shade = T,labels = 2,lines = 1)
+
+subset(mydata,fit$cluster==2)
+#표준화 하기
+std<- function(x){
+  return( (x-min(x)) / (max(x)-min(x)) ) 
+}
+
+apply(iris[,1:4], 2,std)#apply(데이터셋 2-열 1-행 ,함수명)
+
+mydata
+# 표준화하기 ( 변수의 값 차이가 클때 이를 0~1사이로 표준화 시키기 )
+std <- function(x){
+  return( ( x-min(x) ) / ( max(x) - min(x)  )       )
+}
+
+mydata <- apply( iris[ , 1:4], 2, std ) # apply( 데이터셋, 2-열, 1-행, 함수명)
+mydata
+
+
+ds <- data.frame( name=c('A','B'), 키=c(180, 170), 시력=c(1.2, 0.9))
+ds
+ds.std <- apply( ds[ , -1 ], 2, std)
+ds.std
+
+
+# -----
+# 분류
+# ----
+library( class )
+dim( iris )
+
+# 붓꽃의 종류 분류하기 
+# 관찰값 150개를 분석가에게 주었다
+# train 150*60% - 답 ,  test 150*40% - 답
+
+idx <- c( 1:25, 51:75, 101:125)
+idx
+ds.tr.que <-  iris[ idx, 1:4 ] # 학습용문제 50개 준비 
+ds.tr.ans <-  iris[ idx, 5 ] # 학습용문제 답안지 50개 준비 
+ds.tr.ans
+
+ds.test.que <- iris[ -idx, 1:4 ] # 시험문제 100개 준비
+ds.test.ans <- iris[ -idx, 5 ]   # 시험문제 답안지 
+
+pred <- knn(  ds.tr.que,  ds.test.que,  ds.tr.ans, k=3, prob=T    )
+#       knn( 학습용문제, 시험문제, 학습용문제답, k=이웃수, prob=예측된 그룹에 대한 지지확률)
+pred
+
+acc <- mean( pred == ds.test.ans ) # 머신러닝이 예측한 것과 진짜 답을 맞추어보기 
+acc
+table( pred, ds.test.ans )
+
+# 1. R에서 제공하는 Seatbelts 데이터셋에 대해 k-평균 군집화를 실시하고 결과를 그래프로 출력하시오.
+head( Seatbelts )
+class( Seatbelts ) # 시계열 ts "matrix" "array"
+dim( Seatbelts )
+str( Seatbelts )
+
+# 표준화 함수(0~1 사이 상대 숫자 )
+std <- function( x ){
+  return(  ( x - min(x)  )    / ( max(x) - min(x) )    )
+}
+ds <- Seatbelts[ , 1:7]
+head( ds )
+
+
+# • 군집의 수는 2로 한다.
+
+# • Seatbelts 데이터셋에서 마지막에 있는 law 열은 제외하고 군집화를 실행한다.
+ds <- Seatbelts[ , 1:7]
+head( ds ) 
+
+
+# • Seatbelts는 각 변수(열)의 값들의 단위의 차이가 많이 나기 때문에 0~1 표준화를 실시한 후 군집화를 실행한다.
+
+ds.std <- apply(  ds, 2, std )
+head( ds.std )
+fit <- kmeans(  x=ds.std, centers = 2  )
+fit
+
+library( cluster )
+clusplot( ds.std, fit$cluster, color=T, shade=T, labels=2, lines=1  )
+
+subset(ds.std,  fit$cluster == 2 )
+fit$centers
+
+# 2. mlbench 패키지에서 제공하는 Sonar 데이터셋에 대해 k-평균 군집화를 실시하고 결과를 그래프로 출력하시오. 
+
+library(mlbench)
+data("Sonar") # 데이터셋 불러오기
+head( Sonar )
+dim( Sonar )
+class( Sonar )
+str( Sonar )
+
+# • 군집의 수는 2로 한다.
+
+# • Sonar 데이터셋에서 마지막에 있는 Class 열은 제외하고 군집화를 실행한다.
+ds <- Sonar[ , -61 ]  
+fit <- kmeans(ds, centers=2)
+fit
+clusplot( ds, fit$cluster, color=T, shade=T, lablels=2, lines=1   ) # ???
+
+# 3. R에서 제공하는 swiss 데이터셋에 대해 k-평균 군집화를 실시하고 결과를 그래프로 출력하시오.
+# 
+# • 군집의 수는 3으로 한다.
+head(swiss) 
+fit <- kmeans(  swiss, centers = 3)
+fit
+clusplot( swiss, fit$cluster, color=T, shade=T, lablels=2, lines=1   ) 
+
+# 4. R에서 제공하는 rock 데이터셋에 대해 k-평균 군집화를 실시하고 결과를 그래프로 출력하시오.
+# 
+# • 군집의 수는 3으로 한다.
+head( rock )
+dim( rock )
+
+std <- function( x ){
+  return(  ( x - min(x)  )    / ( max(x) - min(x) )    )
+}
+
+ds.rock <- apply( rock, 2, std )
+ds.rock
+
+fit <- kmeans( ds.rock, centers = 3)
+fit
+clusplot( ds.rock, fit$cluster, color=T, shade=T, lablels=2, lines=1   ) 
+warnings( fit )
+
+# 5. mlbench 패키지에서 제공하는 Soybean 데이터셋에 대해 k-최근접 이웃 알고리즘을 이용하여 모델을 만들고 예측 정확도를 측정하시오.
+library( mlbench )
+data( Soybean )
+head( Soybean )
+dim( Soybean )  # 683 36
+class ( Soybean )
+str( Soybean )
+#  Soybean 데이터셋에는 결측값이 포함되어 있으므로 결측값을 제거한다.
+ds.new <- Soybean[ complete.cases( Soybean ),  ]
+dim( ds.new ) # 562 36 
+head( ds.new )
+#  Soybean 데이터셋에서 첫 번째에 있는 Class 열이 그룹 정보이다.
+## 답안지 
+
+#  Soybean 데이터셋에서 짝수 번째 데이터(관측값)를 훈련용 데이터로 하고, 홀수 번째 데이터(관측값)를 테스트용 데이터로 한다.
+# 2,4,6, ... 562 
+idx <- seq( 1, nrow(ds.new ), 2   ) # 1 3 5 7 9 ... 홀수에 대한 인덱스를 구한다. 
+
+# 학습문제 ( 훈련용 데이터 )
+ds.train.question <- ds.new[  -idx  , 2:36 ] 
+head( ds.train.question )
+
+# 학습 답안지
+ds.train.answer <- ds.new[ -idx, 1 ]
+head( ds.train.answer )
+
+# 시험문제 ( 테스트용 데이터 )
+ds.test.question <-  ds.new[ idx, 2:36 ]
+
+# 시험답안지 
+ds.test.answer <-  ds.new[ idx, 1 ]
+
+
+#  k-최근접 이웃에서 k를 3, 5, 7로 다르게 하여 예측 정확도를 비교한다.
+library( class )
+pred <- knn(  ds.train.question,  ds.test.question, ds.train.answer, k= 3 )
+pred
+
+acc <- mean( pred == ds.test.answer ) 
+acc
+# 분석 보고서 : k-최근접 이웃에서 k를 3일때 정확도는 0.933 이다
+
+pred <- knn(  ds.train.question,  ds.test.question, ds.train.answer, k= 5 )
+pred
+
+acc <- mean( pred == ds.test.answer ) 
+acc
+# 분석 보고서 : k-최근접 이웃에서 k를 5일때 정확도는 0.92 이다
+
+pred <- knn(  ds.train.question,  ds.test.question, ds.train.answer, k= 7 )
+pred
+
+acc <- mean( pred == ds.test.answer ) 
+acc
+# 분석 보고서 : k-최근접 이웃에서 k를 7일때 정확도는 0.906이다
+
+#결론 k가 3일때 가장 정확하게 분류할 수 있다. 3명의 이웃이 가장 근접한 이웃이다
+#그래서 k=3인 알고리즘을 채택한다. 
+
+# ------------------------
+# k-fold 교차검증  knn 예측을 높이기 위해서 데이터셋을 골고루 뽑기 
+# ------------------------ 
+
+install.packages( 'cvTools')
+library( cvTools )
+k <-  10
+folds <- cvFolds( nrow( iris ), K = k     ) # 형식  cvFolds( 관측수, 그룹수  )
+folds
+
+acc <- c()
+for( i in 1:k ){
+  ts.idx <- folds$which == i  # folds$which :각 열에 인덱스 순열이 포함된 정수 행렬입니다.
+  ds.train.question <- iris[  -ts.idx,  1:4   ] # 학습문제 훈련용문제
+  ds.train.answer <-  iris[ -ts.idx, 5 ] # 학습문제 답안지  훈련용답안지 
+  ds.test.question <-  iris[ ts.idx, 1:4  ] # 시험문제 테스트용
+  ds.test.answer <-  iris[ ts.idx, 5 ] #시험문제 답안지
+  pred<- knn(  ds.train.question, ds.test.question,ds.train.answer, k= 5 ) # k= 5 최근접 이웃수 
+  acc[i] <- mean(pred == ds.test.answer)
+}
+acc
+mean( acc )
+
+
+# k-최근접 이웃 분류는 1번 분류한 것
+# k-fold는 k-최근접 이웃 분류 여러번해서 분류한 것임 더 정확한 예측을 할 수 있다
+
+
+# 7. mlbench 패키지에서 제공하는 BreastCancer 데이터셋에 대해 k-최근접 이웃 알고리즘을 이용하여 모델을 만들고 예측 정확도를 측정하시오.
+
+library(mlbench)
+data("BreastCancer") # 데이터셋 불러오기
+head(BreastCancer ) 
+dim( BreastCancer )
+class( BreastCancer )
+str( BreastCancer )
+
+#  BreastCancer 데이터셋에는 결측값이 포함되어 있으므로 결측값을 제거한다.
+ds <- BreastCancer[ complete.cases( BreastCancer  ),  ]
+head( ds )
+
+#  BreastCancer 데이터셋에서 마지막에 있는 Class 열이 그룹 정보이다.
+ds.new <-  ds 
+head( ds.new )
+str( ds.new )
+dim( ds.new )
+#  k-최근접 이웃에서 k는 5로 한다.
+#  10-fold 교차 검증 방법으로 예측 정확도를 측정한다.
+library( class )  # knn()
+library( cvTools ) # cvFolds() 
+folds <- cvFolds(  nrow( ds.new ), K=10 )
+head( folds )
+acc <- c() # 각 폴드에 대한 정확도를 담아둘 벡터 
+
+head( ds.new )
+
+for( i in 1:10 ) {
+  # 시험용 자료의 인덱스를 구하기 
+  idx <- folds$which == i
+  # 학습용 문제
+  ds.train.q <- ds.new[ -idx, 1:10 ]
+  head( ds.train.q )
+  # 학습용 답안지
+  ds.train.a <- ds.new[ -idx,  11]
+  head( ds.train.a )
+  # 시험용 문제
+  ds.test.q <- ds.new[ idx, 1:10 ]
+  # 시험용 답안지 
+  ds.test.a <- ds.new[ idx,  11 ]
+  pred <- knn( ds.train.q, ds.test.q, ds.train.a, k=5 )
+  acc[i] <- mean( pred ==  ds.test.a)
+}
+acc
+mean(acc)  # 예측 정확도 0.7498082
+
+
+# 8. mlbench 패키지에서 제공하는 PimaIndiansDiabetes 데이터셋에 대해 k-최근접 이웃 알고리즘을 이용하여 모델을 만들고 예측 정확도를 측정하시오.
+
+library(mlbench)
+data("PimaIndiansDiabetes") # 데이터셋 불러오기
+head( PimaIndiansDiabetes )
+dim( PimaIndiansDiabetes ) # 768 9
+str( PimaIndiansDiabetes )
+class( PimaIndiansDiabetes )
+
+#  PimaIndiansDiabetes 데이터셋에서 마지막에 있는 diabetes 열이 그룹 정보이다.
+
+#  k-최근접 이웃에서 k는 5로 한다.
+
+#  10-fold 교차 검증 방법으로 예측 정확도를 측정한다.
+ds <- PimaIndiansDiabetes[ complete.cases( PimaIndiansDiabetes ), ]
+folds <- cvFolds(  nrow(ds), K=10 )
+acc <- c()
+for( i in 1:10) {
+  # 시험용 자료의 인덱스를 구하기 
+  idx <- folds$which == i
+  # 학습용 문제
+  ds.train.q <- ds[ -idx, 1:8 ]
+  head( ds.train.q )
+  # 학습용 답안지
+  ds.train.a <- ds[ -idx,  9]
+  head( ds.train.a )
+  # 시험용 문제
+  ds.test.q <- ds[ idx, 1:8 ]
+  # 시험용 답안지 
+  ds.test.a <- ds[ idx,  9 ]
+  pred <- knn( ds.train.q, ds.test.q, ds.train.a, k=5 )
+  acc[i] <- mean( pred ==  ds.test.a)
+}
+acc
+mean( acc )
+
+# 9. mlbench 패키지에서 제공하는 Vehicle 데이터셋에 대해 k-최근접 이웃 알고리즘을 이용하여 모델을 만들고 예측 정확도를 측정하시오.
+
+library(mlbench)
+data("Vehicle") # 데이터셋 불러오기
+head( Vehicle )
+dim( Vehicle ) # 846 19
+class( Vehicle )
+str( Vehicle )
+
+#  Vehicle 데이터셋에서 마지막에 있는 Class 열이 그룹 정보이다.
+
+#  k-최근접 이웃에서 k는 3으로 한다.
+
+#  10-fold 교차 검증 방법으로 예측 정확도를 측정한다.
+ds <- Vehicle[ complete.cases(Vehicle), ]
+folds <- cvFolds(  nrow( ds ), K=10 )
+acc <- c()
+
+for( i in 1:10 ) {
+  # 시험용 자료의 인덱스를 구하기 
+  idx <- folds$which == i
+  # 학습용 문제
+  ds.train.q <- ds[ -idx, 1:18 ]
+  head( ds.train.q )
+  # 학습용 답안지
+  ds.train.a <- ds[ -idx,  19]
+  head( ds.train.a )
+  # 시험용 문제
+  ds.test.q <- ds[ idx, 1:18 ]
+  # 시험용 답안지 
+  ds.test.a <- ds[ idx,  19 ]
+  pred <- knn( ds.train.q, ds.test.q, ds.train.a, k=5 )
+  acc[i] <- mean( pred ==  ds.test.a)
+}
+acc
+mean( acc )
+
+# 10. mlbench 패키지에서 제공하는 Vowel 데이터셋에 대해 k-최근접 이웃 알고리즘을 이용하여 모델을 만들고 예측 정확도를 측정하시오.
+
+library(mlbench)
+data("Vowel") # 데이터셋 불러오기
+head( Vowel )
+str( Vowel)
+dim( Vowel ) # 990 11
+class( Vowel )
+
+#  Vowel 데이터셋에서 마지막에 있는 Class 열이 그룹 정보이다.
+#  k-최근접 이웃에서 k는 5로 한다.
+#  10-fold 교차 검증 방법으로 예측 정확도를 측정한다.
+ds <- Vowel[ complete.cases(Vowel), ]
+folds <- cvFolds(  nrow( ds ), K=10 )
+acc <- c()
+
+for( i in 1:10 ) {
+  # 시험용 자료의 인덱스를 구하기 
+  idx <- folds$which == i
+  # 학습용 문제
+  ds.train.q <- ds[ -idx, 1:10 ]
+  head( ds.train.q )
+  # 학습용 답안지
+  ds.train.a <- ds[ -idx,  11]
+  head( ds.train.a )
+  # 시험용 문제
+  ds.test.q <- ds[ idx, 1:10 ]
+  # 시험용 답안지 
+  ds.test.a <- ds[ idx,  11 ]
+  pred <- knn( ds.train.q, ds.test.q, ds.train.a, k=5 )
+  acc[i] <- mean( pred ==  ds.test.a)
+}
+acc
+mean( acc 
