@@ -19,10 +19,10 @@ cv.imshow( 'Drawing', img )
 cv.setMouseCallback('Drawing', draw)
 
 while(True) :
-    if cv.waitKey(1) == 'q':
+    if cv.waitKey(1) == ord('q'):
         break
 
-patch = img[ y1:y2, x1:x2   ] 
+patch = img[ y1:y2, x1:x2, :   ] 
 img = cv.rectangle(img, (x1,y1), (x2, y2), (255,0,0) , 2)
 patch1 = cv.resize( patch, dsize=(0,0), fx=5, fy=5, interpolation=cv.INTER_NEAREST)
 patch2 = cv.resize( patch, dsize=(0,0), fx=5, fy=5, interpolation=cv.INTER_LINEAR)
